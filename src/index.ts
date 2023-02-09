@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express'
 import cors from 'cors'
 import { TAccountDB, TAccountDBPost, TUserDB, TUserDBPost } from './types'
 import { db } from './database/knex'
+import {User} from './models/User'
 
 const app = express()
 
@@ -246,3 +247,5 @@ app.put("/accounts/:id/balance", async (req: Request, res: Response) => {
         }
     }
 })
+
+
